@@ -65,7 +65,7 @@ exports.register = (req, res) => {
 
   const { name, email, password, passwordConfirm } = req.body;
 
-  de.query(
+  db.query(
     "SELECT email FROM users WHERE email = ?",
     [email],
     async (error, results) => {
